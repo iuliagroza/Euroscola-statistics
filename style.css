@@ -64,7 +64,7 @@ body {
 .theory {
 	background-color: #ffffff;
 	color: #000000;
-	width: 100%;
+	width: 99%;
 	height: auto;
 	font-size: 1.25em;
 	padding-top: 1%;
@@ -78,10 +78,65 @@ body {
 }
 
 .info {
-	padding: -3% 2% 0.5% 2%;
+	padding: 1% 2% 0.5% 2%;
 	color: #174c4f;
 }
 
+#q1_chart_div {
+	padding-left: 25%;
+}
+
+#m1_chart_div {
+	float: left;
+}
+
+#s1_chart_div {
+	float: right;
+}
+
+#q2_chart_div {
+	float: left;
+}
+
+#s2_chart_div {
+	float: right;
+}
+
+#q3_chart_div {
+	float: left;
+}
+
+#m3_chart_div {
+	float: right;
+}
+
+#s31_chart_div {
+	float: right;
+}
+
+#s32_chart_div {
+	float: right;
+}
+
+#q2_chart_div {
+	float: left;
+}
+
+#q4_chart_div {
+	padding-left: 25%;
+}
+
+#q5_chart_div {
+	padding-left: 25%;
+}
+
+#m5_chart_div {
+	float: left;
+}
+
+#s5_chart_div {
+	float: right;
+}
 
 @media only screen and (max-width: 700px) {
 	.titl {
