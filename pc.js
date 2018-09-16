@@ -1,11 +1,5 @@
 google.charts.load('current', {'packages':['corechart']});
 
-      google.charts.setOnLoadCallback(drawAge);
-
-      google.charts.setOnLoadCallback(drawSex);
-
-      google.charts.setOnLoadCallback(drawAddress);
-
       google.charts.setOnLoadCallback(drawq1);
 
       google.charts.setOnLoadCallback(drawq2);
@@ -16,62 +10,196 @@ google.charts.load('current', {'packages':['corechart']});
 
       google.charts.setOnLoadCallback(drawq5);
 
-      function drawAge() {
+      google.charts.setOnLoadCallback(drawm1);
+
+      google.charts.setOnLoadCallback(drawm3);
+
+      google.charts.setOnLoadCallback(drawm5);
+
+      google.charts.setOnLoadCallback(draws1);
+
+      google.charts.setOnLoadCallback(draws2);
+
+      google.charts.setOnLoadCallback(draws31);
+
+      google.charts.setOnLoadCallback(draws32);
+
+      google.charts.setOnLoadCallback(draws5);
+
+      function draws1() {
 
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
+          ['Olives', 0],
+          ['Olives', 0],
+          ['Olives', 0],
+          ['Olives', 0],
+          ['Sub 40 ani', 30],
+          ['Peste 40 ani', 70]
+        ]);
+
+        var options = {
+                       title:'În funcție de vârstă',
+                       width:420,
+                       height:320,
+                   };
+
+        var chart = new google.visualization.PieChart(document.getElementById('s1_chart_div'));
+        chart.draw(data, options);
+      }
+
+      function draws2() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Olives', 0],
+          ['Olives', 0],
+          ['Sub 40 ani', 46],
+          ['Peste 40 ani', 54]
+        ]);
+
+        var options = {
+                       title:'În funcție de vârstă',
+                       width:420,
+                       height:320,
+                   };
+
+        var chart = new google.visualization.PieChart(document.getElementById('s2_chart_div'));
+        chart.draw(data, options);
+      }
+
+      function draws31() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Olives', 0],
           ['Sub 40 ani', 38],
           ['Peste 40 ani', 62]
         ]);
 
         var options = {
-                       width:500,
-                       height:400};
+                       title:'În funcție de vârstă - ambulatoriu',
+                       width:420,
+                       height:320,
+                   };
 
-        var chart = new google.visualization.PieChart(document.getElementById('Age_chart_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('s31_chart_div'));
         chart.draw(data, options);
       }
 
-      function drawSex() {
+      function draws32() {
 
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['', 0],	
-          ['Masculin', 33],
-          ['Feminin', 67]
+          ['Olives', 0],
+          ['Olives', 0],
+          ['Olives', 0],
+          ['Olives', 0],
+          ['Sub 40 ani', 63],
+          ['Peste 40 ani', 37]
         ]);
 
         var options = {
-                       width:500,
-                       height:400,
+                       title:'În funcție de vârstă - cabinete private',
+                       width:420,
+                       height:320,
                    };
 
-        var chart = new google.visualization.PieChart(document.getElementById('Sex_chart_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('s32_chart_div'));
         chart.draw(data, options);
       }
 
-      function drawAddress() {
+      function draws5() {
 
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['', 0],
-          ['', 0],
-          ['Rural', 19],
-          ['Urban', 81]
+          ['Sub 40 ani', 65],
+          ['Peste 40 ani', 35]
         ]);
 
         var options = {
-                       width:500,
-                       height:400,
+                       title:'În funcție de vârstă',
+                       width:420,
+                       height:320,
                    };
 
-        var chart = new google.visualization.PieChart(document.getElementById('Address_chart_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('s5_chart_div'));
+        chart.draw(data, options);
+      }
+
+      function drawm1() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Olives', 0],
+          ['Urban', 58],
+          ['Rural', 42],
+        ]);
+
+        var options = {
+                       title:'În funcție de domiciliu',
+                       width:420,
+                       height:320,
+                   };
+
+        var chart = new google.visualization.PieChart(document.getElementById('m1_chart_div'));
+        chart.draw(data, options);
+      }
+
+
+      function drawm3() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Olives', 0],
+          ['Rural', 0],
+          ['Urban', 54],
+          ['Rural', 46]
+        ]);
+
+        var options = {
+                       title:'În funcție de domiciliu',
+                       width:420,
+                       height:320,
+                   };
+
+        var chart = new google.visualization.PieChart(document.getElementById('m3_chart_div'));
+        chart.draw(data, options);
+      }
+
+      function drawm5() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Olives', 0],
+          ['Urban', 64],
+          ['Rural', 36],
+          ['Rural', 0]
+        ]);
+
+        var options = {
+                       title:'În funcție de domiciliu',
+                       width:420,
+                       height:320,
+                   };
+
+        var chart = new google.visualization.PieChart(document.getElementById('m5_chart_div'));
         chart.draw(data, options);
       }
 
@@ -89,8 +217,9 @@ google.charts.load('current', {'packages':['corechart']});
         ]);
 
         var options = {
-                       width:500,
-                       height:400,
+                       title: 'Total',
+                       width:420,
+                       height:320,
                    };
 
         var chart = new google.visualization.PieChart(document.getElementById('q1_chart_div'));
@@ -113,8 +242,9 @@ google.charts.load('current', {'packages':['corechart']});
         ]);
 
         var options = {
-                       width:500,
-                       height:400,
+                       title: 'Total',
+                       width:420,
+                       height:320,
                    };
 
         var chart = new google.visualization.PieChart(document.getElementById('q2_chart_div'));
@@ -137,8 +267,9 @@ google.charts.load('current', {'packages':['corechart']});
         ]);
 
         var options = {
-                       width:500,
-                       height:400,
+                       title: 'Total',
+                       width:420,
+                       height:320,
                    };
 
         var chart = new google.visualization.PieChart(document.getElementById('q3_chart_div'));
@@ -179,8 +310,9 @@ google.charts.load('current', {'packages':['corechart']});
         ]);
 
         var options = {
-                       width:500,
-                       height:400,
+                       title: 'Total',
+                       width:420,
+                       height:320,
                    };
 
         var chart = new google.visualization.PieChart(document.getElementById('q5_chart_div'));
