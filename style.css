@@ -138,6 +138,19 @@ body {
 	float: right;
 }*/
 
+	background-color: #d0d5db;
+	color: #174c4f;
+	font-size: 1em;
+	width: 100%;
+}
+
+#left {
+	background-color: #d0d5db;
+	color: #174c4f;
+	padding: 2%;
+	width: 100%;
+}
+
 @media only screen and (max-width: 700px) {
 	.titl {
 		font-size: 1em;
